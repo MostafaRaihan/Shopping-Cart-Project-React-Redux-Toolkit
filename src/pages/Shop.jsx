@@ -1,21 +1,17 @@
 import React from 'react';
-import useFetch from '../components/useFetch';
+import items from '../item.json';  // fixed import
 import ProductCard from '../components/ProductCard';
 import './CSS/Shop.css';
 
 const Shop = () => {
-  const { data: products, loading, error } = useFetch('http://localhost:3000/products');
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
-
   return (
     <div className="shop">
       <div className="shopTitle">
+        <h1>Shop</h1>
       </div>
       <div className="products">
-        {products?.map((product) => (
-          <ProductCard key={product.id} product={product} />
+        {items.map(item => (
+          <ProductCard key={item.id} product={item} />
         ))}
       </div>
     </div>

@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="links">
-        Raihan Shop
+        Raihan Mobile Shop
       </Link>
       <Link to="/cart" className="links">
         Your Cart <ShoppingCart size={30} className="cartIcon" />
